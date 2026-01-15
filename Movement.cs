@@ -27,8 +27,8 @@ public partial class Movement : CharacterBody2D
 		{
 			_rotationDirection = Input.GetAxis("rotateLeft", "rotateRight");
 		}
-		Vector2 inputDirection = Input.GetVector("left", "right");
-		Velocity = inputDirection * Speed;
+		float inputDirection = Input.GetAxis("left", "right");
+		Velocity = new Vector2(inputDirection * Speed, 0);
 	}
 
 	public override void _PhysicsProcess(double delta)
