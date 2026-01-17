@@ -24,8 +24,7 @@ public partial class Movement : CharacterBody2D
 			LookAt(GetGlobalMousePosition());
 		}
 		else
-		{
-			_rotationDirection = Input.GetAxis("rotateLeft", "rotateRight");
+		{			_rotationDirection = Input.GetAxis("rotateLeft", "rotateRight");
 		}
 		float inputDirection = Input.GetAxis("left", "right");
 		Velocity = new Vector2(inputDirection * Speed, 0);

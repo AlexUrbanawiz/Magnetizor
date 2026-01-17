@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpusfjpot71fc"]
+
+[ext_resource type="Script" uid="uid://b8yhu2ugmgjua" path="res://scripts/player.gd" id="1_0lymk"]
+[ext_resource type="Texture2D" uid="uid://cgfle4bf3g5ai" path="res://New Piskel.png" id="2_bt3ie"]
+[ext_resource type="PackedScene" path="res://scenes/components/advanced_jump_component.tscn" id="3_0lymk"]
+[ext_resource type="PackedScene" path="res://scenes/components/movement_component.tscn" id="4_pkknj"]
+[ext_resource type="PackedScene" path="res://scenes/components/animation_component.tscn" id="5_f2upf"]
+[ext_resource type="PackedScene" path="res://scenes/components/gravity_component.tscn" id="6_jmivq"]
+[ext_resource type="PackedScene" path="res://scenes/components/input_component.tscn" id="7_el75b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6n5k"]
+radius = 17.0
+height = 36.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "animation_component", "jump_component")]
+position = Vector2(369, 201)
+script = ExtResource("1_0lymk")
+gravity_component = NodePath("GravityComponent")
+input_component = NodePath("InputComponent")
+movement_component = NodePath("MovementComponent")
+animation_component = NodePath("AnimationComponent")
+jump_component = NodePath("AdvancedJumpComponent")
+
+[node name="Magnet" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_bt3ie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_g6n5k")
+
+[node name="AdvancedJumpComponent" parent="Player" instance=ExtResource("3_0lymk")]
+
+[node name="MovementComponent" parent="Player" instance=ExtResource("4_pkknj")]
+
+[node name="AnimationComponent" parent="Player" instance=ExtResource("5_f2upf")]
+
+[node name="GravityComponent" parent="Player" instance=ExtResource("6_jmivq")]
+
+[node name="InputComponent" parent="Player" instance=ExtResource("7_el75b")]
