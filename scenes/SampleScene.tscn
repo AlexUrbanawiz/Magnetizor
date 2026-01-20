@@ -1,30 +1,109 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpusfjpot71fc"]
+[gd_scene load_steps=12 format=4 uid="uid://dpusfjpot71fc"]
 
 [ext_resource type="Script" uid="uid://b8yhu2ugmgjua" path="res://scripts/player.gd" id="1_0lymk"]
-[ext_resource type="Texture2D" uid="uid://cgfle4bf3g5ai" path="res://New Piskel.png" id="2_bt3ie"]
-[ext_resource type="PackedScene" path="res://scenes/components/advanced_jump_component.tscn" id="3_0lymk"]
-[ext_resource type="PackedScene" path="res://scenes/components/movement_component.tscn" id="4_pkknj"]
-[ext_resource type="PackedScene" path="res://scenes/components/animation_component.tscn" id="5_f2upf"]
-[ext_resource type="PackedScene" path="res://scenes/components/gravity_component.tscn" id="6_jmivq"]
-[ext_resource type="PackedScene" path="res://scenes/components/input_component.tscn" id="7_el75b"]
+[ext_resource type="Texture2D" uid="uid://c0l2iuprj4sf" path="res://placeholder player.png" id="2_pkknj"]
+[ext_resource type="PackedScene" uid="uid://cu6julls0pges" path="res://scenes/components/advanced_jump_component.tscn" id="3_0lymk"]
+[ext_resource type="PackedScene" uid="uid://dt8055ld427k0" path="res://scenes/components/movement_component.tscn" id="4_pkknj"]
+[ext_resource type="PackedScene" uid="uid://nfkamf5w458n" path="res://scenes/components/animation_component.tscn" id="5_f2upf"]
+[ext_resource type="PackedScene" uid="uid://cfcbmmnhvopj7" path="res://scenes/components/gravity_component.tscn" id="6_jmivq"]
+[ext_resource type="PackedScene" uid="uid://biyaghkv4lr0e" path="res://scenes/components/input_component.tscn" id="7_el75b"]
+[ext_resource type="Texture2D" uid="uid://c0abstjk87743" path="res://assets/test_tiles/Tilemaps/Png Files/wood_moss_alt_tileset_0.png" id="8_pkknj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6n5k"]
-radius = 17.0
-height = 36.0
+radius = 8.0
+height = 16.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2upf"]
+texture = ExtResource("8_pkknj")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, 8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -0.71943474, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.71943474, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -0.8992939, 8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.0791512, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_jmivq"]
+physics_layer_0/collision_layer = 255
+sources/1 = SubResource("TileSetAtlasSource_f2upf")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "animation_component", "jump_component")]
+[node name="Player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component")]
 position = Vector2(369, 201)
 script = ExtResource("1_0lymk")
 gravity_component = NodePath("GravityComponent")
 input_component = NodePath("InputComponent")
 movement_component = NodePath("MovementComponent")
-animation_component = NodePath("AnimationComponent")
 jump_component = NodePath("AdvancedJumpComponent")
 
 [node name="Magnet" type="Sprite2D" parent="Player"]
-texture = ExtResource("2_bt3ie")
+texture = ExtResource("2_pkknj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_g6n5k")
@@ -38,3 +117,10 @@ shape = SubResource("CapsuleShape2D_g6n5k")
 [node name="GravityComponent" parent="Player" instance=ExtResource("6_jmivq")]
 
 [node name="InputComponent" parent="Player" instance=ExtResource("7_el75b")]
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="Layer0" type="TileMapLayer" parent="Level"]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAABAAAQAAAAAAAAABABAAAQABAAAAAAACABAAAQABAAAAAAADABAAAQABAAAAAAAEABAAAQABAAAAAAAFABAAAQABAAAAAAAGABAAAQABAAAAAAAHABAAAQABAAAAAAAIABAAAQABAAAAAAAJABAAAQABAAAAAAAKABAAAQABAAAAAAALABAAAQABAAAAAAAMABAAAQABAAAAAAANABAAAQABAAAAAAAOABAAAQABAAAAAAAPABAAAQABAAAAAAAQABAAAQABAAAAAAARABAAAQABAAAAAAASABAAAQABAAAAAAATABAAAQABAAAAAAAUABAAAQABAAAAAAAAABEAAQAAAAEAAAABABEAAQABAAEAAAACABEAAQABAAEAAAADABEAAQABAAEAAAAEABEAAQABAAEAAAAFABEAAQABAAEAAAAGABEAAQABAAEAAAAHABEAAQABAAEAAAAIABEAAQABAAEAAAAJABEAAQABAAEAAAAKABEAAQABAAEAAAALABEAAQABAAEAAAAMABEAAQABAAEAAAANABEAAQABAAEAAAAOABEAAQABAAEAAAAPABEAAQABAAEAAAAQABEAAQABAAEAAAARABEAAQABAAEAAAASABEAAQABAAEAAAATABEAAQABAAEAAAAUABEAAQABAAEAAAAVABEAAQABAAAAAAAWABEAAQABAAAAAAAXABEAAQABAAAAAAAYABEAAQABAAAAAAAZABEAAQABAAAAAAAaABEAAQABAAAAAAAbABEAAQABAAAAAAAcABEAAQABAAAAAAAdABEAAQABAAAAAAAeABEAAQABAAAAAAAfABEAAQABAAAAAAAgABEAAQABAAAAAAAhABEAAQABAAAAAAAiABEAAQACAAAAAAAiABIAAQACAAEAAAAiABMAAQACAAEAAAAiABQAAQACAAEAAAAiABUAAQACAAEAAAAiABYAAQACAAEAAAABABIAAQABAAEAAAACABIAAQABAAEAAAADABIAAQABAAEAAAAEABIAAQABAAEAAAAFABIAAQABAAEAAAAGABIAAQABAAEAAAAHABIAAQABAAEAAAAIABIAAQABAAEAAAAJABIAAQABAAEAAAAKABIAAQABAAEAAAALABIAAQABAAEAAAAMABIAAQABAAEAAAANABIAAQABAAEAAAAOABIAAQABAAEAAAAPABIAAQABAAEAAAAQABIAAQABAAEAAAARABIAAQABAAEAAAASABIAAQABAAEAAAATABIAAQABAAEAAAAUABIAAQABAAEAAAAVABIAAQABAAEAAAAWABIAAQABAAEAAAAXABIAAQABAAEAAAAYABIAAQABAAEAAAAZABIAAQABAAEAAAAaABIAAQABAAEAAAAbABIAAQABAAEAAAAcABIAAQABAAEAAAAdABIAAQABAAEAAAAeABIAAQABAAEAAAAfABIAAQABAAEAAAAgABIAAQABAAEAAAAhABIAAQABAAEAAAAhABMAAQABAAEAAAAgABMAAQABAAEAAAAfABMAAQABAAEAAAAeABMAAQABAAEAAAAdABMAAQABAAEAAAAcABMAAQABAAEAAAAbABMAAQABAAEAAAAaABMAAQABAAEAAAAZABMAAQABAAEAAAAYABMAAQABAAEAAAAXABMAAQABAAEAAAAWABMAAQABAAEAAAAVABMAAQABAAEAAAAUABMAAQABAAEAAAATABMAAQABAAEAAAASABMAAQABAAEAAAARABMAAQABAAEAAAAQABMAAQABAAEAAAAPABMAAQABAAEAAAAOABMAAQABAAEAAAANABMAAQABAAEAAAAMABMAAQABAAEAAAALABMAAQABAAEAAAAKABMAAQABAAEAAAAJABMAAQABAAEAAAAIABMAAQABAAEAAAAHABMAAQABAAEAAAAGABMAAQABAAEAAAAFABMAAQABAAEAAAAEABMAAQABAAEAAAADABMAAQABAAEAAAACABMAAQABAAEAAAABABMAAQABAAEAAAABABQAAQABAAEAAAACABQAAQABAAEAAAADABQAAQABAAEAAAAEABQAAQABAAEAAAAFABQAAQABAAEAAAAGABQAAQABAAEAAAAHABQAAQABAAEAAAAIABQAAQABAAEAAAAJABQAAQABAAEAAAAKABQAAQABAAEAAAALABQAAQABAAEAAAAMABQAAQABAAEAAAANABQAAQABAAEAAAAOABQAAQABAAEAAAAPABQAAQABAAEAAAAQABQAAQABAAEAAAARABQAAQABAAEAAAASABQAAQABAAEAAAATABQAAQABAAEAAAAUABQAAQABAAEAAAAVABQAAQABAAEAAAAWABQAAQABAAEAAAAXABQAAQABAAEAAAAYABQAAQABAAEAAAAZABQAAQABAAEAAAAaABQAAQABAAEAAAAbABQAAQABAAEAAAAcABQAAQABAAEAAAAdABQAAQABAAEAAAAeABQAAQABAAEAAAAfABQAAQABAAEAAAAgABQAAQABAAEAAAAhABQAAQABAAEAAAAhABUAAQABAAEAAAAgABUAAQABAAEAAAAfABUAAQABAAEAAAAeABUAAQABAAEAAAAdABUAAQABAAEAAAAcABUAAQABAAEAAAAbABUAAQABAAEAAAAaABUAAQABAAEAAAAZABUAAQABAAEAAAAYABUAAQABAAEAAAAXABUAAQABAAEAAAAWABUAAQABAAEAAAAVABUAAQABAAEAAAAUABUAAQABAAEAAAATABUAAQABAAEAAAASABUAAQABAAEAAAARABUAAQABAAEAAAAQABUAAQABAAEAAAAPABUAAQABAAEAAAAOABUAAQABAAEAAAANABUAAQABAAEAAAAMABUAAQABAAEAAAALABUAAQABAAEAAAAKABUAAQABAAEAAAAJABUAAQABAAEAAAAIABUAAQABAAEAAAAHABUAAQABAAEAAAAGABUAAQABAAEAAAAFABUAAQABAAEAAAAEABUAAQABAAEAAAADABUAAQABAAEAAAACABUAAQABAAEAAAAEABYAAQABAAEAAAAFABYAAQABAAEAAAAGABYAAQABAAEAAAAHABYAAQABAAEAAAAIABYAAQABAAEAAAAJABYAAQABAAEAAAAKABYAAQABAAEAAAALABYAAQABAAEAAAAMABYAAQABAAEAAAANABYAAQABAAEAAAAOABYAAQABAAEAAAAPABYAAQABAAEAAAAQABYAAQABAAEAAAARABYAAQABAAEAAAASABYAAQABAAEAAAATABYAAQABAAEAAAAUABYAAQABAAEAAAAVABYAAQABAAEAAAAWABYAAQABAAEAAAAXABYAAQABAAEAAAAYABYAAQABAAEAAAAZABYAAQABAAEAAAAaABYAAQABAAEAAAAbABYAAQABAAEAAAAcABYAAQABAAEAAAAdABYAAQABAAEAAAAeABYAAQABAAEAAAAfABYAAQABAAEAAAAgABYAAQABAAEAAAAhABYAAQABAAEAAAAiABcAAQACAAIAAAAhABcAAQABAAIAAAAgABcAAQABAAIAAAAfABcAAQABAAIAAAAeABcAAQABAAIAAAAdABcAAQABAAIAAAAcABcAAQABAAIAAAAbABcAAQABAAIAAAAaABcAAQABAAIAAAAZABcAAQABAAIAAAAYABcAAQABAAIAAAAXABcAAQABAAIAAAAWABcAAQABAAIAAAAVABcAAQABAAIAAAAUABcAAQABAAIAAAATABcAAQABAAIAAAASABcAAQABAAIAAAARABcAAQABAAIAAAAQABcAAQABAAIAAAAPABcAAQABAAIAAAAOABcAAQABAAIAAAANABcAAQABAAIAAAAMABcAAQABAAIAAAALABcAAQABAAIAAAAKABcAAQABAAIAAAAJABcAAQABAAIAAAAIABcAAQABAAIAAAAHABcAAQABAAIAAAAGABcAAQABAAIAAAAFABcAAQABAAIAAAAEABcAAQABAAIAAAADABYAAQABAAIAAAACABYAAQABAAIAAAABABUAAQABAAIAAAAAABQAAQAAAAIAAAAAABIAAQAAAAEAAAAAABMAAQAAAAEAAAA=")
+tile_set = SubResource("TileSet_jmivq")
