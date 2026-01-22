@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vun62ebhvmdf"]
+
+[ext_resource type="Script" uid="uid://y3ebtt8q3g8f" path="res://scenes/components/magnet_component.gd" id="1_edt5q"]
+
+[node name="MagnetComponent" type="Node"]
+script = ExtResource("1_edt5q")
+charge = null
+magnetic_field = null
