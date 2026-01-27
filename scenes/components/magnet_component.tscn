@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://y3ebtt8q3g8f" path="res://scenes/components/magnet_component.gd" id="1_edt5q"]
 
-[node name="MagnetComponent" type="Node"]
+[node name="MagnetComponent" type="Node2D"]
 script = ExtResource("1_edt5q")
-charge = null
-magnetic_field = null
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(20, 0)
+target_position = Vector2(200, 0)
+collision_mask = 2

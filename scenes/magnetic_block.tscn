@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk1vcgx207fou"]
+
+[ext_resource type="Texture2D" uid="uid://uilxqmrb1jfp" path="res://Placeholder Magnetic Block.png" id="1_f1p07"]
+[ext_resource type="PackedScene" uid="uid://baf2u4k8bkw0k" path="res://scenes/components/magnetic.tscn" id="2_qs2ij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qs2ij"]
+size = Vector2(16, 16)
+
+[node name="MagneticBlock" type="RigidBody2D" groups=["magnetic"]]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qs2ij")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f1p07")
+
+[node name="Magnetic" parent="." instance=ExtResource("2_qs2ij")]
