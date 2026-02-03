@@ -1,4 +1,4 @@
-class_name Magnet
+class_name MagnetComponent
 extends Node
 
 @export_subgroup("Settings")
@@ -55,3 +55,5 @@ func manageMass() -> void:
 		mass /= 2
 		print_debug(mass)
 	
+func getMass() -> float:
+	return mass;

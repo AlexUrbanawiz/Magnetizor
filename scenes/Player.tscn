@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://ljmrcwkroyat"]
+
+[ext_resource type="Script" uid="uid://b8yhu2ugmgjua" path="res://scripts/player.gd" id="1_khinc"]
+[ext_resource type="Texture2D" uid="uid://c0l2iuprj4sf" path="res://placeholder player.png" id="2_bruh7"]
+[ext_resource type="PackedScene" uid="uid://cu6julls0pges" path="res://scenes/components/advanced_jump_component.tscn" id="3_6eyey"]
+[ext_resource type="PackedScene" uid="uid://dt8055ld427k0" path="res://scenes/components/movement_component.tscn" id="4_d3wef"]
+[ext_resource type="PackedScene" uid="uid://nfkamf5w458n" path="res://scenes/components/animation_component.tscn" id="5_o4126"]
+[ext_resource type="PackedScene" uid="uid://cfcbmmnhvopj7" path="res://scenes/components/gravity_component.tscn" id="6_lkdrv"]
+[ext_resource type="PackedScene" uid="uid://biyaghkv4lr0e" path="res://scenes/components/input_component.tscn" id="7_p7iby"]
+[ext_resource type="PackedScene" uid="uid://vun62ebhvmdf" path="res://scenes/components/magnet_component.tscn" id="8_0rnld"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_srp4u"]
+radius = 8.0
+height = 16.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "magnet_component")]
+script = ExtResource("1_khinc")
+gravity_component = NodePath("GravityComponent")
+input_component = NodePath("InputComponent")
+movement_component = NodePath("MovementComponent")
+jump_component = NodePath("AdvancedJumpComponent")
+magnet_component = NodePath("MagnetComponent")
+
+[node name="Magnet" type="Sprite2D" parent="."]
+texture = ExtResource("2_bruh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_srp4u")
+
+[node name="AdvancedJumpComponent" parent="." instance=ExtResource("3_6eyey")]
+
+[node name="MovementComponent" parent="." instance=ExtResource("4_d3wef")]
+
+[node name="AnimationComponent" parent="." instance=ExtResource("5_o4126")]
+
+[node name="GravityComponent" parent="." instance=ExtResource("6_lkdrv")]
+
+[node name="InputComponent" parent="." instance=ExtResource("7_p7iby")]
+
+[node name="MagnetComponent" parent="." instance=ExtResource("8_0rnld")]
+magnetic_field = 20.0
