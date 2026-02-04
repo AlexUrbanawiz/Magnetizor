@@ -6,7 +6,7 @@ extends Node
 @export var magnetic_field: float = 10.0;
 @export var mass: float = 2
 @onready var ray = $RayCast2D
-
+@onready var ray2 = $RayCast2D2
 
 var polarity: bool = false
 var current_massIndex: int = 3
@@ -48,12 +48,16 @@ func swap_polarity() -> void:
 		polarity = !polarity
 
 func manageMass() -> void:
-	if Input.is_action_just_pressed("increment_mass"):
-		mass *= 2
-		print_debug(mass)
-	if  Input.is_action_just_pressed("decrement_mass"):
-		mass /= 2
-		print_debug(mass)
+	ray.force_raycast_update()
+	if ray2.is_colliding():
+		var collider2 = ray2.get_collider()
+		if collider2.is_in_group("metal_pile"):
+			if Input.is_action_just_pressed("increment_mass"):
+				mass *= 2
+				print_debug(mass)
+			if  Input.is_action_just_pressed("decrement_mass"):
+				mass /= 2
+				print_debug(mass)
 	
 func getMass() -> float:
 	return mass;

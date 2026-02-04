@@ -8,3 +8,8 @@ script = ExtResource("1_edt5q")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(200, 0)
 collision_mask = 2
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+target_position = Vector2(0, -1)
+collision_mask = 128
+hit_from_inside = true

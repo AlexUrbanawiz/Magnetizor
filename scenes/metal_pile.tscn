@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://fuvx5buwiovq"]
+
+[ext_resource type="Texture2D" uid="uid://ca8lpnxb3rqcr" path="res://metal_pile.png" id="1_t5dh0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seswu"]
+size = Vector2(16, 16)
+
+[node name="MetalPile" type="StaticBody2D" groups=["metal_pile"]]
+z_index = -1
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_seswu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t5dh0")
