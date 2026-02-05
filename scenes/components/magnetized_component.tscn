@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://benlwaqt2ypgr"]
+
+[ext_resource type="Script" uid="uid://1f3l30ptjs6m" path="res://scenes/components/magnetized_component.gd" id="1_d8v8v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nfhat"]
+radius = 43.104523
+
+[node name="MagnetizedComponent" type="Area2D"]
+script = ExtResource("1_d8v8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nfhat")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

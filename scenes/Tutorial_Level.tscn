@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://tbu4rcxjkayp"]
+[gd_scene load_steps=9 format=4 uid="uid://tbu4rcxjkayp"]
 
 [ext_resource type="PackedScene" uid="uid://ljmrcwkroyat" path="res://scenes/Player.tscn" id="1_n4ont"]
 [ext_resource type="Texture2D" uid="uid://c0abstjk87743" path="res://assets/test_tiles/Tilemaps/Png Files/wood_moss_alt_tileset_0.png" id="2_c2arx"]
 [ext_resource type="PackedScene" uid="uid://dk1vcgx207fou" path="res://scenes/magnetic_block.tscn" id="3_c2arx"]
 [ext_resource type="PackedScene" uid="uid://fuvx5buwiovq" path="res://scenes/metal_pile.tscn" id="4_kcb1g"]
+[ext_resource type="PackedScene" uid="uid://dpp585284myvb" path="res://scenes/magnetic_rectangle_test_magnetize.tscn" id="5_loao0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kcb1g"]
 texture = ExtResource("2_c2arx")
@@ -84,8 +85,8 @@ texture = ExtResource("2_c2arx")
 physics_layer_0/collision_layer = 255
 sources/1 = SubResource("TileSetAtlasSource_kcb1g")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2arx"]
-size = Vector2(128, 79)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qs2ij"]
+size = Vector2(16, 16)
 
 [node name="TutorialLevel" type="Node2D"]
 
@@ -104,7 +105,8 @@ tile_set = SubResource("TileSet_loao0")
 position = Vector2(294, 231)
 
 [node name="CollisionShape2D" parent="Level/MagneticBlock" index="0"]
-shape = SubResource("RectangleShape2D_c2arx")
+scale = Vector2(8, 5)
+shape = SubResource("RectangleShape2D_qs2ij")
 
 [node name="Sprite2D" parent="Level/MagneticBlock" index="1"]
 scale = Vector2(8, 5)
@@ -112,4 +114,9 @@ scale = Vector2(8, 5)
 [node name="MetalPile" parent="Level" instance=ExtResource("4_kcb1g")]
 position = Vector2(8, 264)
 
+[node name="MagneticRectangle" parent="." instance=ExtResource("5_loao0")]
+position = Vector2(575, 379)
+
 [editable path="Level/MagneticBlock"]
+[editable path="MagneticRectangle"]
+[editable path="MagneticRectangle/MagnetizedComponent"]

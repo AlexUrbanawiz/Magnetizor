@@ -105,5 +105,4 @@ position = Vector2(503, 261)
 gravity_scale = 0.8
 
 [node name="MetalPile" parent="Level" instance=ExtResource("5_01rds")]
-z_index = -1
 position = Vector2(95, 248)

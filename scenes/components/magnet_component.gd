@@ -10,6 +10,10 @@ extends Node
 
 var polarity: bool = false
 var current_massIndex: int = 3
+var magnetized_component
+
+func _ready() -> void:
+	magnetized_component = preload("res://scenes/components/magnetized_component.tscn")
 
 
 func _physics_process(delta) -> void:
@@ -21,9 +25,17 @@ func _physics_process(delta) -> void:
 			var collider = ray.get_collider()
 			if collider.is_in_group("magnetic"):
 				print("applying force")
-				var magnetic_object = collider.get_node("Magnetic")
+				var magnetic_object = collider.get_node_or_null("Magnetic")
 				if(magnetic_object != null):
 					handle_magnetism(get_parent(), collider, magnetic_object)
+	if Input.is_action_just_pressed("magnetize"):
+		ray.force_raycast_update()
+		if ray.is_colliding():
+			var collider = ray.get_collider()
+			if collider.is_in_group("magnetic"):
+				var magnetic_object = collider.get_node_or_null("Magnetic")
+				if(magnetic_object != null):
+					magnetize(collider)
 
 #True polarity - push
 #False polarity - pull
@@ -46,6 +58,12 @@ func handle_magnetism(body1: CharacterBody2D, body2: RigidBody2D, magnetComponen
 func swap_polarity() -> void:
 	if Input.is_action_just_pressed("swap_polarity"):
 		polarity = !polarity
+	var sprite: Sprite2D = get_node_or_null("../Magnet")
+	if(polarity):
+		sprite.modulate = Color(1, 0, 0)
+	else:
+		sprite.modulate = Color(0, 0, 1)
+		
 
 func manageMass() -> void:
 	ray.force_raycast_update()
@@ -61,3 +79,15 @@ func manageMass() -> void:
 	
 func getMass() -> float:
 	return mass;
+func getPolarity() -> bool:
+	return polarity;
+
+func magnetize(body2: RigidBody2D) -> void:
+	var instance = magnetized_component.instantiate()
+	if(body2.get_node_or_null("MagnetizedComponent")):
+		var body2MagnetComponent = body2.get_node_or_null("MagnetizedComponent")
+		body2MagnetComponent.name = "DESTROY"
+		body2MagnetComponent.queue_free()
+	body2.add_child(instance)
+	instance.construct(charge, magnetic_field, polarity)
+	instance.name = "MagnetizedComponent"
