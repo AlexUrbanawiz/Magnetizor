@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://biyaghkv4lr0e" path="res://scenes/components/input_component.tscn" id="7_p7iby"]
 [ext_resource type="PackedScene" uid="uid://vun62ebhvmdf" path="res://scenes/components/magnet_component.tscn" id="8_0rnld"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_khinc"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_khinc"]
+radius = 9.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "magnet_component")]
 script = ExtResource("1_khinc")
@@ -24,7 +24,7 @@ magnet_component = NodePath("MagnetComponent")
 texture = ExtResource("2_bruh7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_khinc")
+shape = SubResource("CircleShape2D_khinc")
 
 [node name="AdvancedJumpComponent" parent="." instance=ExtResource("3_6eyey")]
 

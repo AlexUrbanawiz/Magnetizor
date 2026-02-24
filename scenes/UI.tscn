@@ -1,9 +1,45 @@
-[gd_scene format=3 uid="uid://bmfdm2tuv5b2h"]
+[gd_scene load_steps=4 format=3 uid="uid://bmfdm2tuv5b2h"]
 
-[node name="inGameUI" type="Control"]
+[ext_resource type="Texture2D" uid="uid://dgwgtuqv6os4p" path="res://MassIconTemp.png" id="1_dj8aq"]
+[ext_resource type="Texture2D" uid="uid://cimpuiu4er5r5" path="res://PositiveIconTemp.png" id="2_ro3t7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj8aq"]
+font_size = 30
+
+[node name="Ui" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 167.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "2.0"
+label_settings = SubResource("LabelSettings_dj8aq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+texture = ExtResource("1_dj8aq")
+expand_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_ro3t7")
+expand_mode = 2

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://dpusfjpot71fc"]
+[gd_scene load_steps=9 format=4 uid="uid://dpusfjpot71fc"]
 
 [ext_resource type="PackedScene" uid="uid://ljmrcwkroyat" path="res://scenes/Player.tscn" id="4_t4m2x"]
 [ext_resource type="PackedScene" uid="uid://fuvx5buwiovq" path="res://scenes/metal_pile.tscn" id="5_01rds"]
+[ext_resource type="PackedScene" uid="uid://bmfdm2tuv5b2h" path="res://scenes/UI.tscn" id="6_2p3ce"]
 [ext_resource type="Texture2D" uid="uid://c0abstjk87743" path="res://assets/test_tiles/Tilemaps/Png Files/wood_moss_alt_tileset_0.png" id="8_pkknj"]
 [ext_resource type="PackedScene" uid="uid://dk1vcgx207fou" path="res://scenes/magnetic_block.tscn" id="9_f2upf"]
 [ext_resource type="PackedScene" uid="uid://ba0a8fyt7arel" path="res://scenes/magnetic_rectangle.tscn" id="11_el75b"]
@@ -106,3 +107,5 @@ gravity_scale = 0.8
 
 [node name="MetalPile" parent="Level" instance=ExtResource("5_01rds")]
 position = Vector2(95, 248)
+
+[node name="Ui" parent="." instance=ExtResource("6_2p3ce")]

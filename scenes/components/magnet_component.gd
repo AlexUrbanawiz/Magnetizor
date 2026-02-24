@@ -9,7 +9,6 @@ extends Node
 @onready var ray2 = $RayCast2D2
 
 var polarity: bool = false
-var current_massIndex: int = 3
 var magnetized_component
 
 func _ready() -> void:
