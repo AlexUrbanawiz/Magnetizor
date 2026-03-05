@@ -57,6 +57,7 @@ func handle_magnetism(body1: CharacterBody2D, body2: RigidBody2D, magnetComponen
 func swap_polarity() -> void:
 	if Input.is_action_just_pressed("swap_polarity"):
 		polarity = !polarity
+		EventBus.emit_signal("polarityChanged", polarity)
 	var sprite: Sprite2D = get_node_or_null("../Magnet")
 	if(polarity):
 		sprite.modulate = Color(1, 0, 0)
@@ -71,9 +72,11 @@ func manageMass() -> void:
 		if collider2.is_in_group("metal_pile"):
 			if Input.is_action_just_pressed("increment_mass"):
 				mass *= 2
+				EventBus.emit_signal("massChanged", mass)
 				print_debug(mass)
 			if  Input.is_action_just_pressed("decrement_mass"):
 				mass /= 2
+				EventBus.emit_signal("massChanged", mass)
 				print_debug(mass)
 	
 func getMass() -> float:
