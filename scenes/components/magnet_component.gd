@@ -13,6 +13,8 @@ var magnetized_component
 
 func _ready() -> void:
 	magnetized_component = preload("res://scenes/components/magnetized_component.tscn")
+	EventBus.emit_signal.call_deferred("polarityChanged", polarity)
+	EventBus.emit_signal.call_deferred("massChanged", mass)
 
 
 func _physics_process(delta) -> void:

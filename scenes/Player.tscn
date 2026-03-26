@@ -12,7 +12,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_khinc"]
 radius = 9.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "magnet_component")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "magnet_component") groups=["player"]]
 script = ExtResource("1_khinc")
 gravity_component = NodePath("GravityComponent")
 input_component = NodePath("InputComponent")

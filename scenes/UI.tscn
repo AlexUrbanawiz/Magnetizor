@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ciwvovqddm0st" path="res://scenes/UIManager.gd" id="1_5en4g"]
 [ext_resource type="Texture2D" uid="uid://dgwgtuqv6os4p" path="res://MassIconTemp.png" id="1_dj8aq"]
-[ext_resource type="Texture2D" uid="uid://bwj8d6dj7cox" path="res://NegativeIconTemp.png" id="3_5en4g"]
+[ext_resource type="Texture2D" uid="uid://cimpuiu4er5r5" path="res://PositiveIconTemp.png" id="3_5en4g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dj8aq"]
 font_size = 30

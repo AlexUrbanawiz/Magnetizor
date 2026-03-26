@@ -27,6 +27,7 @@ project/assembly_name="Magnetizor"
 
 magnetic=""
 metal_pile=""
+player=""
 
 [input]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dpusfjpot71fc"]
+[gd_scene load_steps=10 format=4 uid="uid://dpusfjpot71fc"]
 
 [ext_resource type="PackedScene" uid="uid://ljmrcwkroyat" path="res://scenes/Player.tscn" id="4_t4m2x"]
 [ext_resource type="PackedScene" uid="uid://fuvx5buwiovq" path="res://scenes/metal_pile.tscn" id="5_01rds"]
 [ext_resource type="PackedScene" uid="uid://bmfdm2tuv5b2h" path="res://scenes/UI.tscn" id="6_2p3ce"]
+[ext_resource type="PackedScene" uid="uid://d103mst1oc88p" path="res://scenes/Door.tscn" id="7_0lymk"]
 [ext_resource type="Texture2D" uid="uid://c0abstjk87743" path="res://assets/test_tiles/Tilemaps/Png Files/wood_moss_alt_tileset_0.png" id="8_pkknj"]
 [ext_resource type="PackedScene" uid="uid://dk1vcgx207fou" path="res://scenes/magnetic_block.tscn" id="9_f2upf"]
 [ext_resource type="PackedScene" uid="uid://ba0a8fyt7arel" path="res://scenes/magnetic_rectangle.tscn" id="11_el75b"]
@@ -86,7 +87,7 @@ texture = ExtResource("8_pkknj")
 physics_layer_0/collision_layer = 255
 sources/1 = SubResource("TileSetAtlasSource_t4m2x")
 
-[node name="Node2D" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("4_t4m2x")]
 position = Vector2(141, 242)
@@ -109,6 +110,14 @@ gravity_scale = 0.8
 position = Vector2(95, 248)
 
 [node name="Ui" parent="." instance=ExtResource("6_2p3ce")]
+visible = false
+
+[node name="Door" parent="." instance=ExtResource("7_0lymk")]
+position = Vector2(693, 261)
+
+[node name="LevelLoadComponent" parent="Door" index="0"]
+sceneToLoad = "res://scenes/Tutorial_Level.tscn"
 
 [editable path="Player"]
 [editable path="Ui"]
+[editable path="Door"]

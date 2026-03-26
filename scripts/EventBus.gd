@@ -1,8 +1,9 @@
 extends Node
 
-signal polarityChanged(value);
-signal massChanged(value);
-
+signal polarityChanged(value)
+signal massChanged(value)
+signal sceneToLoad(value)
+signal loadScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
