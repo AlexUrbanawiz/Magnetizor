@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://d103mst1oc88p"]
 
 [ext_resource type="PackedScene" uid="uid://b3g2eg4yvbhll" path="res://scenes/components/level_load_component.tscn" id="1_eyv6f"]
-[ext_resource type="Texture2D" uid="uid://d0ljoq38o6erj" path="res://DoorTemp.png" id="2_mg2as"]
+[ext_resource type="Texture2D" uid="uid://b0f54scg3xbbr" path="res://assets/Final-Art/kenney_1-bit-platformer-pack/Tiles/Default/tile_0056.png" id="2_eyv6f"]
 
 [node name="Door" type="Node2D"]
 
 [node name="LevelLoadComponent" parent="." instance=ExtResource("1_eyv6f")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_mg2as")
+texture = ExtResource("2_eyv6f")

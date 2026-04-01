@@ -2,6 +2,7 @@ extends Area2D
 
 @export var sceneToLoad : String
 @onready var collisionShape: CollisionShape2D = $CollisionShape2D
+@export var locked : bool = false
 
 func _ready() -> void:
 	EventBus.emit_signal.call_deferred("sceneToLoad", sceneToLoad)
@@ -14,3 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Player entered Door")
 		print("Scene to load: " + sceneToLoad)
 		EventBus.emit_signal("loadScene")
+
+func toggleLock() -> void:
+	locked = !locked

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ljmrcwkroyat"]
 
 [ext_resource type="Script" uid="uid://b8yhu2ugmgjua" path="res://scripts/player.gd" id="1_khinc"]
-[ext_resource type="Texture2D" uid="uid://c0l2iuprj4sf" path="res://placeholder player.png" id="2_bruh7"]
+[ext_resource type="Texture2D" uid="uid://bl0aw8qx7bdrs" path="res://assets/Final-Art/New-Magnet.png" id="2_khinc"]
 [ext_resource type="PackedScene" uid="uid://cu6julls0pges" path="res://scenes/components/advanced_jump_component.tscn" id="3_6eyey"]
 [ext_resource type="PackedScene" uid="uid://dt8055ld427k0" path="res://scenes/components/movement_component.tscn" id="4_d3wef"]
 [ext_resource type="PackedScene" uid="uid://nfkamf5w458n" path="res://scenes/components/animation_component.tscn" id="5_o4126"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://vun62ebhvmdf" path="res://scenes/components/magnet_component.tscn" id="8_0rnld"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_khinc"]
-radius = 9.0
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("gravity_component", "input_component", "movement_component", "jump_component", "magnet_component") groups=["player"]]
 script = ExtResource("1_khinc")
@@ -21,7 +21,7 @@ jump_component = NodePath("AdvancedJumpComponent")
 magnet_component = NodePath("MagnetComponent")
 
 [node name="Magnet" type="Sprite2D" parent="."]
-texture = ExtResource("2_bruh7")
+texture = ExtResource("2_khinc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_khinc")

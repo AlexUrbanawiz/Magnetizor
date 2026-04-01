@@ -89,7 +89,7 @@ sources/1 = SubResource("TileSetAtlasSource_kcb1g")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6s28w"]
 size = Vector2(16, 16)
 
-[node name="Level" type="Node2D"]
+[node name="Level_0" type="Node2D"]
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
