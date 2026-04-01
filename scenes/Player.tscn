@@ -27,12 +27,15 @@ texture = ExtResource("2_khinc")
 shape = SubResource("CircleShape2D_khinc")
 
 [node name="AdvancedJumpComponent" parent="." instance=ExtResource("3_6eyey")]
+jump_velocity = -150.0
 
 [node name="MovementComponent" parent="." instance=ExtResource("4_d3wef")]
 
 [node name="AnimationComponent" parent="." instance=ExtResource("5_o4126")]
 
 [node name="GravityComponent" parent="." instance=ExtResource("6_lkdrv")]
+gravity = 450.0
+max_gravity_multiplier = 2.0
 
 [node name="InputComponent" parent="." instance=ExtResource("7_p7iby")]
 
